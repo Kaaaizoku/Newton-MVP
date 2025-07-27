@@ -24706,11 +24706,17 @@ function sendShape(mesh) {
   const data = extractShapeData(mesh);
   const index = addedObjects.length - 1;
   objectMeshMap[index] = mesh;
+  const type = "mesh";
+  const payload = data;
+  const msg = {
+    type,
+    payload
+  };
   if (socket.readyState === WebSocket.OPEN) {
-    socket.send(JSON.stringify(data));
+    socket.send(JSON.stringify(msg));
   } else {
     socket.addEventListener("open", () => {
-      socket.send(JSON.stringify(data));
+      socket.send(JSON.stringify(msg));
     }, { once: true });
   }
 }

@@ -72,10 +72,11 @@ async def websocket_endpoint(websocket: WebSocket):
     try:
         while True:
             msg = await websocket.receive_text()
+            m = json.loads(msg) # Convert JSON string to Python dict
 
-            if msg.type == 'mesh':
+            if m.get("type") == 'mesh':
 
-                obj = json.loads(msg.payload)
+                obj = m.get("payload") # 'payload' is already a dict from frontend
 
                 if obj["type"] == "cylinder":
                     # Step 1: Extract parameters from frontend

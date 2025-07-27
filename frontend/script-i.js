@@ -47,7 +47,15 @@ scene.add(light);
 
 // list of added objects
 // This will hold the objects added to the scene for display in the UI and for sending to the backend
-// Each object will have a mesh, name, and type
+/**
+ * Array of objects added to the scene.
+ * Each object has the following structure:
+ * {
+ *   mesh: THREE.Mesh,      // The Three.js mesh object
+ *   name: string,          // Display name of the object
+ *   type: string           // Type of the object (e.g., 'mesh')
+ * }
+ */
 const addedObjects = [];
 
 
@@ -223,8 +231,8 @@ function sendShape(mesh) {
   const data = extractShapeData(mesh);
   const index = addedObjects.length - 1; // Fix: Use last added index
   objectMeshMap[index] = mesh;
-  type = 'mesh'; // Set type to 'mesh' for the backend
-  payload = data;
+  const type = 'mesh'; // Set type to 'mesh' for the backend
+  const payload = data;
   const msg = {
     type: type,
     payload: payload
