@@ -1,0 +1,13 @@
+{
+  "name": "mvp-webpage",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "three": "^0.178.0"
+  }
+}

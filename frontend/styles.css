@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(to top, #AEFF98, #99F8FF);
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  font-family: sans-serif;
+}
+
+.importer {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 100px;
+  height: calc(100vh - 35%);
+  background-color: rgba(255, 255, 255, 1);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff9d00;
+}
+
+.importer h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #8f5800;
+  font-size: 1.2em;
+  font-style: bold;
+}
+
+.importer button,
+.importer button:focus {
+  font-size: 2em;
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #ff9d00;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.importer button:hover {
+  background-color: #cc7a00;
+}
+
+.side-panel {
+  width: 15%;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* space between boxes */
+}
+
+.bottom-panel {
+  width: 100%;
+  position: absolute;
+  top: calc(50px + 65vh);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  height: 150px;
+}
+.menu-box {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enables scrolling if content overflows */
+}
+
+.menu-box h2 {
+    color: #fff;
+  margin-top: 0;
+  text-align: center;
+}
+
+.canvas {
+  width: 70%;
+  height: calc(100vh - 35%); /* Adjust height to fill the remaining space */
+  background-color: #f0f0f0;
+  position: absolute; /* Allows absolute positioning of child elements */
+  left: 10%;
+  top: 50px; /* Aligns with the top of the side panel */
+  border: 2px solid #ccc;
+}
+
+.menu-box ul {
+
+  list-style:square outside;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.menu-box li {
+  padding: 8px 0;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+
+
+.objects-panel .menu-box {
+  height: 200px;
+  position: static; /* allows free placement */
+}
+
+.constraints-panel {
+  position: relative; /* allows free placement */
+  height: 200px; /* allows dynamic height */
+}
+
+
+.dynamics-panel .transform-panel .motion-panel {
+  width: 400px;
+  position: relative; /* allows free placement */
+}
+
+.bottom-panel .menu-box {
+  width: 300px;
+  height: 100%;
+}

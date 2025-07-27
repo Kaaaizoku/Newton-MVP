@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gradient Background</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+<div class="side-panel">
+<div class="objects-panel">
+  <div class="menu-box">
+    <h2>Objects</h2>
+    <ul>
+      <li>Cube</li>
+      <li>Sphere</li>
+    </ul>
+  </div>
+</div>
+
+<div class="constraints-panel">
+  <div class="menu-box">
+    <h2>Constraints</h2>
+
+    <label for="objectSelect">Object:</label>
+    <select id="objectSelect">
+      <option value="">-- Select an Object --</option>
+    </select>
+
+    <br><br>
+
+    <label for="constraintType">Constraint Type:</label>
+    <select id="constraintType">
+      <option value="">-- Select Constraint --</option>
+      <option value="fixed">Fixed</option>
+      <option value="hinge">Hinge</option>
+      <!-- Add more as needed -->
+    </select>
+
+    <div id="hingeOptions" style="display: none; margin-top: 10px;">
+      <label for="hingeAxis">Axis (x,y,z):</label>
+      <input type="text" id="hingeAxis" placeholder="e.g. 0,0,1"><br>
+
+      <label for="hingePoint">Anchor Point (x,y,z):</label>
+      <input type="text" id="hingePoint" placeholder="e.g. 0,1,0">
+    </div>
+  </div>
+</div>
+</div>
+
+<div class = "importer">
+  <h2>Importer</h2>
+  <button id="addCylinder"><img width="24" height="24" src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/external-Cylinder-design-those-icons-lineal-those-icons.png" alt="Cylinder"/></img></button>
+
+</div>
+<div class = "canvas">
+</div>
+
+<div class = "bottom-panel">
+  <div calss = "dynamics-panel">
+  <div class="menu-box">
+    <h2>Dynamics</h2>
+    <ul>
+      <li>Gravity</li>
+      <li>Friction</li>
+    </ul>
+  </div>
+  </div>
+  <div class="motion-panel">
+    <div class="menu-box">
+      <h2>Motion</h2>
+      <ul>
+        <li>body</li>
+        <li>Constraint</li>
+      </ul>
+    </div>
+  </div>
+    <div class = "transform-panel">
+      <div class="menu-box">
+        <h2>Transform</h2>
+        <ul>
+          <li>Translate</li>
+          <li>Rotate</li>
+          <li>Scale</li>
+        </ul>
+      </div>
+    </div>
+</div>
+
+
+
+  <!-- Three.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script type="module" src ="script-o.js"> </script>
+</body>
+</html>
+
